@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+  ##########################################
+  #                 Yt2mpX      	         #
+  #           Made by Jettcodey            #
+  #                © 2025                  #
+  #           DO NOT REMOVE THIS           #
+  ##########################################
+  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Downloader</title>
+  <link rel="icon" href="https://raw.githubusercontent.com/Jettcodey/Jettcodey/refs/heads/main/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>YouTube Downloader</h2>
+    <input type="text" id="urlInput" placeholder="Enter YouTube URL" />
+
+    <label for="formatSelect">Format:</label>
+    <select id="formatSelect" onchange="toggleQualityDropdown()">
+      <option value="mp3" selected>MP3 (Audio)</option>
+      <option value="mp4">MP4 (Video)</option>
+    </select>
+
+    <label for="qualitySelect" id="qualityLabel" style="display:none;">Quality:</label>
+    <select id="qualitySelect" style="display:none;">
+      <option value="360p">360p</option>
+      <option value="480p">480p</option>
+      <option value="720p">720p</option>
+      <option value="1080p" selected>1080p</option>
+    </select>
+
+    <button onclick="startDownload()">Download</button>
+    
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <p class="status" id="statusText">Enter a YouTube URL and click download.</p>
+    
+    <div class="download-link" id="downloadLink">
+      <p>Download Ready: <a id="downloadAnchor" href="#" download>Click Here</a></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
